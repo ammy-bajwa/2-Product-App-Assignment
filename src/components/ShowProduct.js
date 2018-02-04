@@ -1,30 +1,26 @@
 import React from 'react';
 
 const ShowProducts = (props) => {
-      
-    return(
+
+    return (
         <div>
-       <ol>{props.products.map((e) => {
-           return (
-          <div key={e}>
-          <li>
-          <span>Product Name : {e.productName}</span><br/>
-          <span>Product Quantity: {e.productQuantity}</span><br/>
-          <span>Product Link : {e.productLink}</span><br/>
-          <button className="button" onClick={() => {
-              props.deleteOption(e.productName)
-          }}>Remove This Product</button>
-          <button className="button" onClick={() => {
-              props.editProduct(e.productName,e.productQuantity,e.productLink)
-          }}>Edit This Product</button>
-          </li><hr/>
-          </div>
-                  )
-       }) }
-       </ol>
-       { props.products.length !==0 &&
-       <button className="button" onClick={props.removeAll}>Remove All Products</button>
-       }
+            {props.products.length != 0 && <h2>All Products Detalils</h2>}
+
+            {props.products.map((product, index) => {
+                return (
+                    <div className="productDiv border" key={index}>
+                        <h4>Product Name is     <b>{product.productName}</b></h4>
+                        <h4>Product Quantity is <b>{product.productQuantity}</b></h4>
+                        <h4>Product Link is     <b>{product.productLink}</b></h4>
+                        <button className="btn btn-default" onClick={() => {
+                            props.deleteOption(product.productName)
+                        }}>Remove This Product</button>
+                    </div>
+                )
+            })}
+            {props.products.length == 0 ? "There Is No Product To Show" :
+                <button className="btn btn-default" onClick={props.removeAll}>Remove All Products</button>
+            }
         </div>
     );
 }

@@ -1,0 +1,12 @@
+@import './base/components/ProductApp.css';
+@import './base/components/AddProduct.css';
+@import './base/components/ShowProduct.css';
+
+.border{
+    border: 3px solid black;
+    border-radius: 10px;
+}
+body{
+    font-weight: 700;
+    font-size: 30px;
+}

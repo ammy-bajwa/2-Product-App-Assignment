@@ -1,0 +1,19 @@
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    height: 100% ;
+}
+.HeaderDiv{
+   margin: 20px;
+   padding: 10px 30px;
+}
+.contentDiv{
+    margin: 20px;
+   padding: 10px 30px;
+   display: flex;
+   flex-direction: row;
+}
+.outerContent{
+    margin: 20px;
+   padding: 10px 30px;
+}
