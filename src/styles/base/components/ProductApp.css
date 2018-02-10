@@ -8,9 +8,11 @@
    padding: 10px 30px;
 }
 .contentDiv{
+    border-bottom: 3px solid #262626;
     margin: 20px;
    padding: 10px 30px;
    display: flex;
+   justify-content: space-between;
    flex-direction: row;
 }
 .outerContent{

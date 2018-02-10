@@ -34,12 +34,12 @@ class ProductApp extends React.Component {
     render() {
         return (
             <Router>
-                <div className='mainDiv container-fluid border'>
-                    <div className='HeaderDiv border'>
-                        <h1>Product App</h1>
-                        <h3>By Amir Ali</h3>
+                <div className='mainDiv container-fluid'>
+                    <div className='HeaderDiv border row'>
+                        <h1 className="text-center">Product App</h1>
+                        <h3 className="text-center">By Amir Ali</h3>
                     </div>
-                    <div className="contentDiv container-fluid border">
+                    <div className="contentDiv">
                         <button className="btn btn-default"><Link to="/">Home</Link></button>
                         <button className="btn btn-default"><Link to="/Add_Product">Add Product</Link></button>
                         <button className="btn btn-default"><Link to="/Show_Product">Show Product</Link></button>
